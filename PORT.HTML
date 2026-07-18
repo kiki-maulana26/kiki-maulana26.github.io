@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Pribadi</title>
+    <!-- Menggunakan Tailwind CSS untuk styling modern yang praktis -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      /* Efek Minimalis tapi tidak sederhana (Glassmorphism & Hover Glow) */
+      .bento-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 1.5rem;
+        transition: all 0.3s ease;
+      }
+      .bento-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(99, 102, 241, 0.4);
+        box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.2);
+      }
+
+      /* Animasi Gradient Text */
+      .text-gradient {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to right, #818cf8, #c084fc);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-950 text-slate-300 min-h-screen p-6 md:p-12 antialiased">
+    <main class="max-w-5xl mx-auto space-y-6">
+      <!-- Hero Section -->
+      <header class="bento-card p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8">
+        <div>
+          <p class="text-indigo-400 font-medium mb-2 tracking-wide text-sm uppercase">Portfolio</p>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Halo, Saya <span class="text-gradient">Kiki Maulana</span></h1>
+          <p class="text-slate-400 leading-relaxed max-w-xl">Saya seorang profesional yang berfokus pada hasil dan eksekusi teknis. Di sini Anda akan menemukan rangkuman kemampuan bahasa dan keahlian teknis yang saya kuasai.</p>
+        </div>
+        <!-- Foto profil -->
+        <div class="w-32 h-32 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 p-1 flex-shrink-0">
+          <img src="KIKI.jpg" alt="Foto Kiki" class="w-full h-full rounded-full object-cover" />
+        </div>
+      </header>
+
+      <!-- Bento Grid Layout untuk Skill -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Skill Teknis (Lebar 2 Kolom) -->
+        <section class="bento-card p-8 md:col-span-2">
+          <h2 class="text-2xl font-semibold text-white mb-6 flex items-center gap-2">
+            <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
+              ></path>
+            </svg>
+            Skill Teknis
+          </h2>
+
+          <div class="space-y-6">
+            <!-- Kategori 1 -->
+            <div>
+              <h3 class="text-slate-400 text-sm uppercase tracking-wider mb-3">Tools</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-4 py-2 bg-slate-800/50 rounded-lg text-sm border border-slate-700/50 text-indigo-200">Manifold Gauge</span>
+                <span class="px-4 py-2 bg-slate-800/50 rounded-lg text-sm border border-slate-700/50 text-indigo-200">Vacuum Pump</span>
+                <span class="px-4 py-2 bg-slate-800/50 rounded-lg text-sm border border-slate-700/50 text-indigo-200">Refrigerant Recovery Machine</span>
+                <span class="px-4 py-2 bg-slate-800/50 rounded-lg text-sm border border-slate-700/50 text-indigo-200">Multimeter Digital / Analog</span>
+                <span class="px-4 py-2 bg-slate-800/50 rounded-lg text-sm border border-slate-700/50 text-indigo-200">Clamp Meter</span>
+              </div>
+            </div>
+
+            <!-- Kategori 2 -->
+            <div>
+              <h3 class="text-slate-400 text-sm uppercase tracking-wider mb-3">Spesialisasi</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-4 py-2 bg-slate-800/50 rounded-lg text-sm border border-slate-700/50 text-purple-200">HVAC</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Kemampuan Bahasa (Lebar 1 Kolom) -->
+        <section class="bento-card p-8 md:col-span-1 flex flex-col">
+          <h2 class="text-2xl font-semibold text-white mb-6 flex items-center gap-2">
+            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+            </svg>
+            Bahasa
+          </h2>
+
+          <div class="space-y-5 flex-grow">
+            <!-- Bahasa 1 -->
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium text-slate-200">Indonesia</span>
+                <span class="text-slate-400 text-sm">Native</span>
+              </div>
+              <div class="w-full bg-slate-800 rounded-full h-1.5">
+                <div class="bg-indigo-500 h-1.5 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+
+            <!-- Bahasa 2 -->
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium text-slate-200">Inggris</span>
+                <span class="text-slate-400 text-sm">A2</span>
+              </div>
+              <div class="w-full bg-slate-800 rounded-full h-1.5">
+                <div class="bg-purple-500 h-1.5 rounded-full" style="width: 35%"></div>
+              </div>
+            </div>
+
+            <!-- Bahasa 3 -->
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="font-medium text-slate-200">Jepang</span>
+                <span class="text-slate-400 text-sm">N5 (Dasar)</span>
+              </div>
+              <div class="w-full bg-slate-800 rounded-full h-1.5">
+                <div class="bg-pink-500 h-1.5 rounded-full" style="width: 25%"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer / Kontak -->
+      <footer class="text-center py-8 text-slate-500 text-sm">
+        <p>Hubungi saya di <a href="mailto:email@anda.com" class="text-indigo-400 hover:text-indigo-300 transition-colors">kikikmna207@gmail.com</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
